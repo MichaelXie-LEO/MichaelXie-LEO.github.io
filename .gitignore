@@ -1,0 +1,19 @@
+# Credentials and local settings
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.codex/
+.agents/
+
+# Editor, operating system, and temporary files
+.DS_Store
+Thumbs.db
+Desktop.ini
+~$*
+*.log
+*.tmp
+__pycache__/
+node_modules/
+.venv/

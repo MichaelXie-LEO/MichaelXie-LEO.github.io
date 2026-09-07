@@ -1,0 +1,78 @@
+/* Static academic adaptation of Minima (MIT). See LICENSES/minima.txt. */
+:root {
+  --page: #fdfdfd;
+  --text: #202124;
+  --muted: #5f6368;
+  --link: #205da8;
+  --line: #e8e8e8;
+  --content-width: 48rem;
+}
+
+* { box-sizing: border-box; }
+html { scroll-padding-top: 2rem; }
+body {
+  margin: 0;
+  color: var(--text);
+  background: var(--page);
+  font: 400 1rem/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, "Microsoft YaHei", sans-serif;
+  -webkit-text-size-adjust: 100%;
+  overflow-wrap: break-word;
+}
+a { color: var(--link); text-decoration: none; text-underline-offset: .2em; }
+a:hover { text-decoration: underline; }
+a:focus-visible { outline: 2px solid var(--link); outline-offset: 4px; border-radius: 1px; }
+p { margin: 0 0 1rem; }
+h1, h2, h3 { color: #222; line-height: 1.35; font-weight: 400; }
+h1 { margin: 0 0 .5rem; font-size: 2.25rem; letter-spacing: -.04rem; }
+h1 span { font-size: .7em; letter-spacing: 0; }
+h2 { margin: 0 0 1.5rem; font-size: 1.65rem; letter-spacing: -.025rem; }
+h3 { margin: 0 0 .4rem; font-size: 1.125rem; font-weight: 500; }
+.wrapper { width: min(100% - 3rem, var(--content-width)); margin-inline: auto; }
+.site-header { border-top: 5px solid #424242; border-bottom: 1px solid var(--line); }
+.header-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: .3rem 1.5rem; min-height: 4rem; padding-block: .65rem; }
+.site-title { color: #424242; font-size: 1.625rem; font-weight: 300; letter-spacing: -.025rem; }
+.site-title span { margin-left: .25rem; font-size: .7em; }
+nav { display: flex; flex-wrap: wrap; gap: .15rem 1.25rem; }
+nav a { display: inline-block; padding-block: .5rem; color: #424242; font-size: .9375rem; }
+.page-content { padding-block: 2.75rem 3rem; }
+.intro { margin-bottom: 3rem; }
+.affiliation { color: var(--muted); margin-bottom: 1.5rem; }
+.profile-links { display: flex; flex-wrap: wrap; gap: .2rem 1.25rem; margin-top: 1.4rem; }
+.profile-links a { padding-block: .3rem; }
+section + section { margin-top: 3rem; }
+.paper-list { list-style: none; padding: 0; margin: 0; }
+.paper-list li { margin-bottom: 1.8rem; }
+.paper-list li:last-child { margin-bottom: 0; }
+.paper-list p { margin: .22rem 0 0; }
+.paper-note, .paper-status { color: var(--muted); font-size: .9375rem; }
+.paper-links { display: flex; flex-wrap: wrap; gap: .15rem 1rem; font-size: .875rem; }
+.paper-links a { display: inline-block; padding-block: .2rem; }
+.muted { color: var(--muted); }
+#teaching h3:not(:first-of-type) { margin-top: 1.25rem; }
+address { font-style: normal; }
+.site-footer { padding-block: 1.75rem; border-top: 1px solid var(--line); color: var(--muted); font-size: .875rem; }
+.footer-inner { display: flex; justify-content: space-between; gap: .5rem 1rem; flex-wrap: wrap; }
+.footer-inner p { margin: 0; }
+.skip-link { position: absolute; top: -8rem; left: 1rem; z-index: 2; padding: .65rem 1rem; background: var(--page); border: 2px solid var(--link); }
+.skip-link:focus { top: 1rem; }
+
+@media (max-width: 36rem) {
+  .wrapper { width: calc(100% - 2rem); }
+  .header-inner { align-items: flex-start; flex-direction: column; padding-block: .5rem; gap: 0; }
+  nav { column-gap: 1.4rem; }
+  .page-content { padding-top: 2rem; }
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.5rem; }
+  section + section { margin-top: 2.5rem; }
+  .paper-list li { margin-bottom: 1.65rem; }
+}
+
+@media print {
+  body { background: white; color: black; font-size: 10pt; }
+  .wrapper { width: 100%; }
+  nav, .skip-link, .site-footer { display: none; }
+  .page-content { padding: 1rem 0; }
+  a { color: black; }
+  h2, h3 { break-after: avoid; }
+  .paper-list li { break-inside: avoid; }
+}
