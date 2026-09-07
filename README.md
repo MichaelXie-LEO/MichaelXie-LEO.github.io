@@ -18,20 +18,24 @@ Minima 模板的许可保留在 `LICENSES/minima.txt`，许可说明适用于模
 在此仓库文件夹打开 PowerShell，修改完成后运行：
 
 ```powershell
-git status
-git add index.html assets
-git diff --cached --stat
-git commit -m "Update research and CV"
-git push
+$homepageDirectory = (Get-Location).Path.Replace('\', '/')
+$homepageTrust = "safe.directory=$homepageDirectory"
+git -c $homepageTrust status
+git -c $homepageTrust add index.html assets
+git -c $homepageTrust diff --cached --stat
+git -c $homepageTrust commit -m "Update research and CV"
+git -c $homepageTrust push
 ```
 
-提交前用 `git diff --cached` 查看将上传的内容。`git push` 成功后，GitHub Pages 会自动更新，通常需要几分钟。
+提交前用 `git -c $homepageTrust diff --cached` 查看将上传的内容。上传成功后，GitHub Pages 会自动更新，通常需要几分钟。
+上面的目录信任参数仅在本次命令生效，用于处理主页文件由 Codex 创建、上传由你的 Windows 账户执行时的目录所有者差异，不修改全局 Git 信任设置。
 
 ## GitHub Pages 设置
 
 仓库为 `MichaelXie-LEO/MichaelXie-LEO.github.io`，发布分支为 `main`。
 在 GitHub 仓库的 Settings → Pages 中，选择 Deploy from a branch → `main` → `/ (root)`。
 `.nojekyll` 使 GitHub Pages 直接使用静态页面，无需主题构建。
+2026-09-07 已上传主页并确认上述发布设置生效，HTTPS 已开启。
 
 ## 在其他本地代码文件夹使用 GitHub
 
