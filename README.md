@@ -11,7 +11,7 @@ Minima 模板的许可保留在 `LICENSES/minima.txt`，许可说明适用于模
 
 - `index.html`：个人介绍、论文、教学和联系方式。
 - `assets/main.css`：字体、颜色、间距和手机布局。
-- `assets/CV_JinXie_20260425.pdf`：现有公开主页所链接的 CV。替换文件名时，同时修改 `index.html` 中的两个 CV 链接。
+- `assets/CV_JinXie_20260907.pdf`：2026-09-07 更新的英文简历。替换文件名时，同时修改 `index.html` 中的两个 CV 链接。
 
 直接双击 `index.html` 即可本地查看。页面无需 JavaScript，也不依赖外部字体或样式服务。
 
@@ -60,7 +60,8 @@ GitHub 登录检查：`gh auth status`。需要重新登录时：`gh auth login 
 - 现有个人主页：https://sites.google.com/view/jin-xie-phbs/home
 - 现有研究页面：https://sites.google.com/view/jin-xie-phbs/home/research
 - 个人提供的中英文网站介绍及 2026 年 3 月 CV。
-- 公开主页上的 2026-04-25 CV。
+- 2026-09-07 用户提供的英文简历（当前 CV）。
+- 公开主页上的 2026-04-25 CV（初版参考）。
 - 参考模板配置：https://github.com/ljz0/ljz0.github.io/blob/main/_config.yml
 - Minima：https://github.com/jekyll/minima/tree/v2.5.1
 
